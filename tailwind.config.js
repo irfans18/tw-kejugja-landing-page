@@ -1,5 +1,5 @@
 module.exports = {
-   mode: 'jit',
+   mode: "jit",
    content: ["./src/**/*.{html,js}"],
    theme: {
       extend: {
@@ -23,19 +23,20 @@ module.exports = {
       },
       variants: {
          extend: {
-             fontSize: ["hover", "focus"],
-             backgroundOpacity: ["active"],
-             borderWidth: ["hover", "focus"],
-             textColor: [
-                 "responsive",
-                 "dark",
-                 "group-hover",
-                 "focus-within",
-                 "hover",
-                 "focus",
-             ],
+            fontSize: ["hover", "focus"],
+            backgroundOpacity: ["active"],
+            borderWidth: ["hover", "focus"],
+            textColor: [
+               "responsive",
+               "dark",
+               "group-hover",
+               "focus-within",
+               "hover",
+               "focus",
+            ],
+            textDecoration: ['hover'],
          },
-     },
+      },
    },
    plugins: [],
 };
