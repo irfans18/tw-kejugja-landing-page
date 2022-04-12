@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <link href="/dist/output.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <script
          src="https://code.jquery.com/jquery-3.6.0.js"
          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -75,7 +76,9 @@
          </div>
       </header>
 
-      <div class="bg-hero-pattern bg-center bg-cover w-full h-screen group">
+      <div
+         class="bg-hero-pattern bg-center bg-fixed bg-cover w-full h-screen group"
+      >
          <div class="group">
             <div class="flex justify-center py-4 pt-16">
                <h1
@@ -150,14 +153,12 @@
                   <h1
                      class="text-cream-rkj text-center md:text-left text-xl md:text-2xl xl:text-4xl 2xl:text-5xl"
                   >
-                     <span class="logo-val"
+                     <span
                         >Produk Kejugja menerapkan konsep circular economy</span
                      >
                      dan
-                     <span class="logo-val"
-                        >memertahankan sepuluh core values</span
-                     >
-                     <span class="logo-val">
+                     <span>memertahankan sepuluh core values</span>
+                     <span>
                         demi menjaga kelangsungan alam untuk generasi masa depan
                         yang sustainable, inovatif dan edukatif.
                      </span>
@@ -176,33 +177,76 @@
             <img class="hidden lg:block" src="assets/cheese-story.png" alt="" />
          </div>
       </section>
+      <section id="gallery">
+         <div class="bg-cheese-story-pattern bg-center bg-fixed">
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1497671954146-59a89ff626ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600$h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1573480813647-552e9b7b5394?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600$h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=600$h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1544568104-5b7eb8189dd4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+            <figure>
+               <img
+                  src="https://images.unsplash.com/photo-1555424221-250de2a343ad?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=50"
+                  width="1000"
+                  height="1000"
+               />
+            </figure>
+         </div>
+      </section>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
-         // window.addEventListener('scroll', (event) => {
-         //    let scroll = this.scrollY;
-         //    console.log(scroll);
-         // })
-         // // console.log(window.pageYOffset);
-
-         // $(document).ready(function () {
-         //    console.log(window.pageYOffset);
-         //    var scroll_pos = 0;
-         //    $(document).scroll(function () {
-         //       scroll_pos = $(this).scrollTop();
-         //       // let blink = $(".logo-val");
-         //       if (scroll_pos > 1600 && scroll_pos <2100) {
-         //          // blink.forEach(element => {
-         //          //    element.css("color", "#000");
-         //          // });
-         //          // $(".logo-val").css("color", "#000");
-         //          $(".logo-val").each(function(i, obj) {
-         //             //test
-         //             obj[i].css("color", "#000");
-         //          });
-         //       } else {
-         //          $(".logo-val").css("color", "#FEF5E6");
-         //       }
-         //    });
-         // });
+         AOS.init();
       </script>
    </body>
 </html>
