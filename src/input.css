@@ -5,6 +5,7 @@
 @layer base {
    html {
       font-family: Alata, system-ui, sans-serif;
+      width:100vw;
    }
 
    /* ================= sticky gallery ============== */
@@ -16,7 +17,7 @@
    figure {
       position: sticky;
       top: 0;
-      display: flex;
+      /* display: flex; */
       align-items: center;
       justify-content: center;
       width: 100vw;
