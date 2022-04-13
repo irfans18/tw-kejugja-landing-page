@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script
+         src="https://code.jquery.com/jquery-3.6.0.js"
+         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+         crossorigin="anonymous"
+      ></script>
+   </head>
+   <body>
+      <style>
+         .slide {
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+            /* background-image: url(assets/bg-cheese-story.png);
+            background-attachment: fixed; */
+            /* background-color: #FEF5E6; */
+         }
+         .slide:nth-of-type(even) {
+            right: 0;
+         }
+         .slide:nth-of-type(odd) {
+            left: 0;
+         }
+         .slide--text {
+            background-color: white;
+            padding: 30px;
+            color: black;
+            /* font-family: "Fjalla One", sans-serif; */
+            text-align: center;
+            /* background-color: aquamarine; */
+            /* text-transform: uppercase; */
+         }
+         .slide__inner {
+            height: 100%;
+            border: 2px dashed black;
+            padding: 20% 5% 5% 5%;
+            font-size: 2em;
+            /* background-color: antiquewhite; */
+            /* display: flex; */
+         }
+         .slide--locked,
+         .slide--sticky {
+            position: fixed !important;
+            top: 0 !important;
+         }
+         .slide--scrolling {
+            position: absolute;
+         }
+         * {
+            box-sizing: border-box;
+         }
+         html,
+         body {
+            margin: 0;
+            /* background-image: url(assets/bg-cheese-story.png); */
+         }
+         img {
+            width: 100%;
+            height: 100%;
+         }
+         .demo-instructions {
+            font-size: 0.5em;
+         }
+         .demo-arrow {
+            position: relative;
+            animation: demo-arrow 0.4s ease-in-out infinite alternate;
+         }
+         a {
+            color: inherit;
+         }
+         @keyframes demo-arrow {
+            0% {
+               top: 0;
+            }
+            100% {
+               top: 10px;
+            }
+         }
+      </style>
+      <!-- <article id="slide-0" class="slide slide--locked">
+         <img src="assets/png/Rectangle 2-9.png" /> -->
+      <article id="slide-0" class="slide slide--text slide--locked">
+         <div class="slide__inner">
+            <p>A Split screen gallery</p>
+            <p class="demo-arrow">&darr;</p>
+            <p class="demo-instructions">Scroll down</p>
+         </div>
+      </article>
+      <!-- <article id="slide-1" class="slide slide--text slide--locked">
+      <div class="slide__inner">
+            <p>A Split screen gallery</p>
+            <p class="demo-arrow">&darr;</p>
+            <p class="demo-instructions">Scroll down</p>
+         </div> -->
+      <article id="slide-1" class="slide slide--locked">
+         <img src="assets/png/Rectangle 2-9.png" />
+      </article>
+      <article id="slide-2" class="slide slide--scrolling slide--text">
+         <div class="slide__inner">
+            <p>
+               It's a nice way to tell a story. Works as an image gallery as
+               well.
+            </p>
+         </div>
+      </article>
+      <article id="slide-3" class="slide">
+         <!-- <img src="http://lorempixel.com/g/768/1152/people/3" /> -->
+         <img src="assets/png/Rectangle 2-8.png" />
+      </article>
+      <article id="slide-4" class="slide">
+         <!-- <img src="http://lorempixel.com/g/768/1152/people/9" /> -->
+         <img src="assets/png/Rectangle 2-7.png" />
+      </article>
+      <article id="slide-5" class="slide slide--text">
+         <div class="slide__inner">
+            <p>
+               Doesn't work on iOS because it uses fixed positioning. Fallback
+               is necessary.
+            </p>
+         </div>
+      </article>
+      <article id="slide-6" class="slide">
+         <!-- <img src="http://www2.eduardoboucas.com/images/ElsaBW2.jpg" /> -->
+         <img src="assets/png/Rectangle 2-8.png" />
+      </article>
+      <article id="slide-7" class="slide slide--text">
+         <div class="slide__inner">
+            <p>But that's life, isn't it?</p>
+            <p class="demo-instructions">The end.</p>
+         </div>
+      </article>
+      <article id="slide-8" class="slide slide--text">
+         <div class="slide__inner">
+            <p>But that's life, isn't it?</p>
+            <p class="demo-instructions">The end.</p>
+         </div>
+      </article>
+      <article id="slide-9" class="slide slide--text">
+         <div class="slide__inner">
+            <p>But that's life, isn't it?</p>
+            <p class="demo-instructions">The end.</p>
+         </div>
+      </article>
+      <article id="slide-10" class="slide slide--text">
+         <div class="slide__inner">
+            <p>But that's life, isn't it?</p>
+            <p class="demo-instructions">The end.</p>
+         </div>
+      </article>
+
+      <script>
+         var windowHeight = $(window).height();
+         var $slides = $(".slide");
+
+         function init() {
+            $("body").css("height", $slides.length * 100 + "%");
+
+            $slides.each(function (index) {
+               $(this).css({
+                  "z-index": index,
+                  top: index * 100 + "%",
+               });
+            });
+
+            var $scrollingSlide = $(".slide--scrolling").last();
+            var scrollingSlideIndex = $(".slide").index($scrollingSlide);
+            $(window).scrollTop((scrollingSlideIndex - 1) * windowHeight);
+         }
+
+         function adjustPositions() {
+            var scrollPosition = $(window).scrollTop();
+            var scrollingSlide = Math.floor(scrollPosition / windowHeight) + 1;
+            var $scrollingSlide = $("#slide-" + scrollingSlide);
+            $scrollingSlide
+               .prevAll(".slide")
+               .removeClass("slide--scrolling")
+               .addClass("slide--locked");
+            $scrollingSlide
+               .removeClass("slide--locked")
+               .addClass("slide--scrolling");
+            $scrollingSlide
+               .nextAll(".slide")
+               .removeClass("slide--locked")
+               .removeClass("slide--scrolling");
+         }
+
+         $(document).ready(function () {
+            init();
+         });
+
+         $(window).scroll(function () {
+            adjustPositions();
+         });
+      </script>
+   </body>
+</html>

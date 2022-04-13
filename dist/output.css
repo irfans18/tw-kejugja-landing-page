@@ -447,43 +447,43 @@ figure {
 }
 
 figure:nth-child(1) img {
-  transform: scale(0.6) rotate(-12.5deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(2) img {
-  transform: scale(0.6) rotate(-9.72222deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(3) img {
-  transform: scale(0.6) rotate(-6.94deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(4) img {
-  transform: scale(0.6) rotate(-4.16deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(5) img {
-  transform: scale(0.6) rotate(-1.38deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(6) img {
-  transform: scale(0.6) rotate(1.38deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(7) img {
-  transform: scale(0.6) rotate(4.16deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(8) img {
-  transform: scale(0.6) rotate(6.94deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(9) img {
-  transform: scale(0.6) rotate(9.72deg);
+  transform: scale(0.6) ;
 }
 
 figure:nth-child(10) img {
-  transform: scale(0.6) rotate(12.5deg);
+  transform: scale(0.6) ;
 }
 
 figure img {
@@ -539,6 +539,18 @@ figure img {
   --tw-backdrop-sepia:  ;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -548,8 +560,16 @@ figure img {
   top: 0px;
 }
 
+.top-\[20px\] {
+  top: 20px;
+}
+
 .z-\[100\] {
   z-index: 100;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .mx-16 {
@@ -567,6 +587,10 @@ figure img {
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -589,6 +613,22 @@ figure img {
   height: 600;
 }
 
+.h-\[200vh\] {
+  height: 200vh;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }
@@ -609,8 +649,24 @@ figure img {
   width: 600;
 }
 
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -637,6 +693,10 @@ figure img {
   border-radius: 9999px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .bg-orange-rkj\/95 {
   background-color: rgb(244 143 45 / 0.95);
 }
@@ -661,6 +721,11 @@ figure img {
   background-color: rgb(244 143 45 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-hero-pattern {
   background-image: url('/src/assets/hero.jpg');
 }
@@ -671,6 +736,15 @@ figure img {
 
 .bg-logo-section-pattern {
   background-image: url('/src/assets/bg-logo-section.png');
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-purple-500 {
+  --tw-gradient-from: #a855f7;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(168 85 247 / 0));
 }
 
 .bg-cover {
@@ -691,6 +765,22 @@ figure img {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-44 {
+  padding: 11rem;
+}
+
+.p-20 {
+  padding: 5rem;
 }
 
 .py-4 {
@@ -754,14 +844,28 @@ figure img {
   color: rgb(254 245 230 / var(--tw-text-opacity));
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-yellow-rkj {
   --tw-text-opacity: 1;
   color: rgb(255 241 147 / var(--tw-text-opacity));
 }
 
+.text-orange-rkj {
+  --tw-text-opacity: 1;
+  color: rgb(244 143 45 / var(--tw-text-opacity));
+}
+
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:not-italic:hover {
@@ -785,6 +889,10 @@ figure img {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:p-20 {
+    padding: 5rem;
   }
 
   .md\:text-left {
