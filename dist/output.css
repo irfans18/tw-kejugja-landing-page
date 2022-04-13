@@ -659,12 +659,28 @@ figure img {
   flex-direction: column;
 }
 
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-items-end {
+  justify-items: end;
 }
 
 .overflow-y-auto {
@@ -868,6 +884,11 @@ figure img {
 .text-yellow-rkj {
   --tw-text-opacity: 1;
   color: rgb(255 241 147 / var(--tw-text-opacity));
+}
+
+.text-orange-rkj {
+  --tw-text-opacity: 1;
+  color: rgb(244 143 45 / var(--tw-text-opacity));
 }
 
 .drop-shadow-lg {

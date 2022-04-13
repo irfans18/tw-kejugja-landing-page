@@ -12,15 +12,13 @@
          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
          crossorigin="anonymous"
       ></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollToPlugin.min.js"></script>
 
       <style>
          :root {
             --minh: 98vh;
             --color1: #f48f2d;
             --color2: #fef5e6;
+            --bg: url("assets/hero.jpg");
             /* --color2: #f48f2d;
             --color1: #fef5e6; */
          }
@@ -34,7 +32,7 @@
             background-image: linear-gradient(
                to bottom,
                var(--color2) 50%,
-               var(--color1) 50%
+               /* background-image: 'assets/hero.jpg', */ var(--color1) 50%
             );
             color: var(--color1);
          }
@@ -102,205 +100,85 @@
             </div>
          </div>
       </div>
-      <div class="n-curtain">
-         <div class="n-invert">
-            <!-- <div class="flex flex-row justify-center items-center h-screen">
-               <div class="flex items-center justify-center">
-                  <img
-                     class="w-[600px]"
-                     src="assets/kejugja-color.png"
-                     alt=""
-                  />
-               </div>
-               <div class="text-7xl flex items-center justify-center">
-                  <h2>
-                     Produk Kejugja menerapkan konsep circular economy dan
-                     memertahankan sepuluh core values yang bertujuan untuk
-                     menjaga kelangsungan alam untuk generasi masa depan yang
-                     sustainable, inovatif dan edukatif.
-                  </h2>
-               </div>
-            </div> -->
-
-            <div
-               class="flex flex-col md:flex-row justify-center items-center h-screen"
-            >
+      <section id="logo">
+         <div class="n-curtain">
+            <div class="n-invert">
                <div
-                  class="flex bg-yellow-rkj w-auto rounded-full mt-20 md:mt-0 mx-16"
+                  class="flex flex-col md:flex-row justify-center items-center h-screen"
                >
-                  <img
-                     src="assets/kejugja-color.png"
-                     class="w-full lg:w-[400px] 2xl:w-[600px]"
-                     alt="logo-kejugja"
-                  />
-               </div>
-               <div
-                  class="wrapp flex flex-justify items-center h-full lg:w-1/3 mx-16"
-               >
-               
-                  <h1
-                     class="text-center md:text-left text-xl md:text-2xl xl:text-4xl 2xl:text-5xl"
+                  <div
+                     class="flex bg-yellow-rkj w-auto rounded-full mt-20 md:mt-0 mx-16"
                   >
-                     <span class="sect"
-                        >Produk Kejugja menerapkan konsep circular economy</span
+                     <img
+                        src="assets/kejugja-color.png"
+                        class="w-full lg:w-[400px] 2xl:w-[600px]"
+                        alt="logo-kejugja"
+                     />
+                  </div>
+                  <div
+                     class="wrapp flex flex-justify items-center h-full lg:w-1/3 mx-16"
+                  >
+                     <h1
+                        class="text-orange-rkj text-center md:text-left text-xl md:text-2xl xl:text-4xl 2xl:text-5xl"
                      >
-                     dan
-                     <span class="sect">memertahankan sepuluh core values</span>
-                     <span class="sect">
-                        demi menjaga kelangsungan alam untuk generasi masa depan
-                        yang sustainable, inovatif dan edukatif.
-                     </span>
-                  </h1>
+                        <span class="sect"
+                           >Produk Kejugja menerapkan konsep circular economy dan
+                        </span>
+                        <span class="sect">memertahankan sepuluh core values</span>
+                        <span class="sect">
+                           demi menjaga kelangsungan alam untuk generasi masa depan
+                           yang sustainable, inovatif dan edukatif.
+                        </span>
+                     </h1>
+                  </div>
                </div>
             </div>
          </div>
+      </section>
+
+      <div class="bg-orange-rkj w-full h-screen flex justify-center">
+         <div class="flex flex-col justify-center items-center">
+            <img
+               class="w-1/2"
+               src="assets/kejugja-no-color.png"
+               alt="kejugja-no-color"
+            />
+            <a
+               href="#"
+               class="w-full text-yellow-rkj font-['Staatliches'] text-7xl text-center hover:underline italic hover:not-italic"
+               >Pilih Kejumu>></a
+            >
+         </div>
       </div>
 
-      <style>
-         :root {
-            --light: #fff;
-            --dark: #000;
-         }
-         .wrap {
-            background: var(--dark);
-         }
-         * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-         }
-         h1 {
-            text-align: center;
-         }
-         .section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-         }
-         .color-dark {
-            color: #fff;
-         }
-      </style>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollToPlugin.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/TextPlugin.min.js"></script>
 
-      <section class="wrap">
-         <div class="section color-dark" data-color="dark">
-            <h1>One</h1>
-         </div>
-         <div class="section color-light" data-color="light">
-            <h1>Two</h1>
-         </div>
-         <div class="section color-dark" data-color="dark">
-            <h1>Three</h1>
-         </div>
-         <div class="section color-light" data-color="light">
-            <h1>Four</h1>
-         </div>
-      </section>
-
-      <!-- <section id="cheese-story">
-         <div class="bg-cream-rkj w-full h-screen flex">
-            <img
-               class="block lg:hidden"
-               src="assets/cheese-story-portrait.jpeg"
-               alt=""
-            />
-            <img class="hidden lg:block" src="assets/cheese-story.png" alt="" />
-         </div>
-      </section>
-      <section id="gallery">
-         <div class="bg-cheese-story-pattern bg-center bg-fixed">
-            <figure><img src="assets/png/Rectangle 2-9.png" alt="" /></figure>
-            <figure class="flex">
-               <img src="assets/png/Rectangle 2-8.png" alt="" />
-               <h2
-                  class="text-black text-5xl text-center"
-                  data-aos="slide-up"
-                  data-aos-easing="ease-in-back"
-                  data-aos-duration="0"
-                  data-aos-offset="250"
-               >
-                  asdasdas
-               </h2>
-            </figure>
-            <figure class="flex">
-               <img src="assets/png/Rectangle 2-7.png" alt="" />
-               <h2
-                  class="text-black text-5xl text-center"
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-back"
-                  data-aos-duration="0"
-                  data-aos-offset="0"
-               >
-                  sssasada
-               </h2>
-            </figure>
-            <figure><img src="assets/png/Rectangle 2-6.png" alt="" /></figure>
-            <figure><img src="assets/png/Rectangle 2-5.png" alt="" /></figure>
-            <figure><img src="assets/png/Rectangle 2-4.png" alt="" /></figure>
-            <figure><img src="assets/png/Rectangle 2-3.png" alt="" /></figure>
-            <figure><img src="assets/png/Rectangle 2-2.png" alt="" /></figure>
-            <figure><img src="assets/png/Rectangle 2-1.png" alt="" /></figure>
-            <figure><img src="assets/png/Rectangle 2.png" alt="" /></figure>
-         </div>
-      </section> -->
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-         AOS.init();
-         // document.getElementById("hightlight").style.backgroundPosition = "-100% 0";
-      </script>
       <script>
          gsap.registerPlugin(ScrollTrigger);
+         gsap.registerPlugin(TweenLite);
 
-         //gsap.fromTo( ".wrap", {
-         //  backgroundColor: gsap.getProperty("html", "--dark")
-         //}, {
-         //  scrollTrigger: {
-         //    trigger: ".color-light",
-         //    scrub: true,
-         //    end: "bottom bottom",
-         //  },
-         //  backgroundColor: gsap.getProperty("html", "--light")
-         //});
-
-         gsap.utils.toArray(".section").forEach((section, i) => {
-            if (section.getAttribute("data-color") !== null) {
-               var colorAttr = section.getAttribute("data-color");
-
-               gsap.to(".wrap", {
-                  backgroundColor:
-                     colorAttr === "dark"
-                        ? gsap.getProperty("html", "--dark")
-                        : gsap.getProperty("html", "--light"),
-                  immediateRender: false,
-                  scrollTrigger: {
-                     trigger: section,
-                     scrub: true,
-                     start: "top bottom",
-                     end: "+=100%",
-                  },
-               });
-            }
-         });
-
-         gsap.utils.toArray(".sect").forEach((section, i) => {
-            if (section.getAttribute("data-color") !== null) {
-               var colorAttr = section.getAttribute("data-color");
-
-               gsap.to(".wrapp", {
-                  backgroundColor:
-                     colorAttr === "dark"
-                        ? gsap.getProperty("span", "--dark")
-                        : gsap.getProperty("span", "--light"),
-                  immediateRender: false,
-                  scrollTrigger: {
-                     trigger: section,
-                     scrub: true,
-                     start: "top bottom",
-                     end: "+=100%",
-                  },
-               });
-            }
+         // var t1 = TweenLite.to(".sect", 0.75, {
+         //    text: "Strawberry",
+         //    color: "#f00",
+         //    ease: Linear.easeNone,
+         //    paused: true,
+         //    reversed: true,
+         // });
+         gsap.to(".sect", {
+            scrollTrigger: {
+               trigger: ".c",
+               start: "center center",
+               end: "top 300px",
+               scrub: 3,
+               markers: true,
+               toggleActions: "restart pause reverse pause",
+            },
+            color: "#FEF5E6",
+            ease: Linear.easeNone,
+            // duration:3,
          });
       </script>
    </body>
