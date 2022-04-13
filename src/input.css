@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+   
    html {
       font-family: Alata, system-ui, sans-serif;
-      width:100vw;
+      width: 100vw;
    }
+
+  
 
    /* ================= sticky gallery ============== */
    /* body {
@@ -24,34 +27,34 @@
       height: 100vh;
    }
    figure:nth-child(1) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(2) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(3) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(4) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(5) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(6) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(7) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(8) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(9) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure:nth-child(10) img {
-      transform: scale(0.6) ;
+      transform: scale(0.6);
    }
    figure img {
       width: 100vmin;
@@ -60,6 +63,4 @@
    }
 
    /* ============end:sticky gallery============ */
-
-   
 }
